@@ -1,23 +1,26 @@
-import React from 'react';
-import CurrentCalendarDay from './current-calendar-day'
+import React from "react";
+import { format } from "date-fns";
+import style from '../calendar/calendar.module.css';
+import CurrentDay from './current-day';
+import CurrentCalendarMounth from './current-calendar-mounth';
 
 
-const date = new Date();
-class Calendar extends React.Component{
-  constructor(props){
-    super(props)
-    this.state={
-      date:date,
-    }
+class Calendar extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      day: new Date(),
+    };
   }
   
-  render(){
-    return(
-      <>
-        <CurrentCalendarDay date={this.state.date}/>
-        {/* <CurrentCalendarMounth/>  */}
-      </>
-    )
+  render() {
+    const {day}=this.state;
+    return (
+      <div className ={style.calendarContainer}>
+        <CurrentDay day={day}/>
+        <CurrentCalendarMounth day = {day}/>
+      </div>
+    );
   }
 }
 

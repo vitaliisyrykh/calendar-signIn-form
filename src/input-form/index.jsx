@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import styles from "./input-form.module.css";
-import cx from 'classnames';
+import cx from "classnames";
 
 class InputForm extends Component {
   constructor(props) {
@@ -42,7 +42,7 @@ class InputForm extends Component {
           type="password"
           name="password"
         ></input>
-        <input type='submit'></input>
+        <input type="submit"></input>
       </form>
     );
   }

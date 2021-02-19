@@ -1,4 +1,5 @@
 import { Component } from "react";
+import PropTypes from 'prop-types';
 
 class Counter extends Component {
   constructor(props) {
@@ -23,7 +24,6 @@ class Counter extends Component {
     this.setState((state, props) => {
       if (state.count <= 0) {
         state.count = 0;
-        
       }else{
         return { count: state.count - props.newCount };
       }
@@ -45,5 +45,8 @@ class Counter extends Component {
     );
   }
 }
+ Counter.propTypes = {
+   newCount:PropTypes.number.isRequired,
+  }; 
 
 export default Counter;

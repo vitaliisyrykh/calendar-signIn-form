@@ -1,0 +1,17 @@
+.bodyContainer{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  width: 50%;
+
+  
+}
+.weekDaysContainer{
+  display: flex;
+  justify-content: space-around;
+}
+.weekDay{
+  padding:5px;
+}

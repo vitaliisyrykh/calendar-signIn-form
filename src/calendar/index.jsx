@@ -1,5 +1,5 @@
 import React from "react";
-import {addMonths} from 'date-fns'
+import {addMonths, getYear, getMonth} from 'date-fns'
 import style from '../calendar/calendar.module.css';
 import CurrentDay from './current-day';
 import CurrentCalendarBody from './current-calendar-body';
@@ -23,13 +23,17 @@ class Calendar extends React.Component {
   
   render() {
     const {day}=this.state;
+    const year = getYear(day);
+    const month = getMonth(day)
     return (
       <section className ={style.calendarContainer}>
         <CurrentDay day={day}/>
         <CurrentCalendarBody 
           day = {day} 
           handlePrev = {this.handlePrevMounth} 
-          handleNext={this.handleNextMounth}/>
+          handleNext={this.handleNextMounth}
+          year={year}
+          month={month}/>
       </section>
     );
   }

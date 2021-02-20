@@ -1,8 +1,8 @@
 import {Component} from 'react';
 import style from './current-calendar-body.module.scss'
 import MounthYear from './mounth-year';
-
-class CurrentCalendarDay extends Component{
+import Month from './mounth'
+class CurrentCalendarBody extends Component{
   constructor(props){
     super(props)
     this.state={
@@ -23,16 +23,17 @@ class CurrentCalendarDay extends Component{
     )
   }
     render(){
+      const {day, handlePrev, handleNext}=this.props;
       return(
         <div className={style.bodyContainer}>
           <MounthYear 
-          day={this.props.day} 
-          handlePrev={this.props.handlePrev} 
-          handleNext = {this.props.handleNext}/>
+          day={day} 
+          handlePrev={handlePrev} 
+          handleNext = {handleNext}/>
           {this.weekDays()}
-          {/* <CalendarDays/> */}
+          <Month day={day}/> 
         </div>
       )
     }
 }
-export default CurrentCalendarDay ;
+export default CurrentCalendarBody ;

@@ -1,5 +1,6 @@
 import {Component} from 'react';
 import {format} from 'date-fns';
+import styles from'./day.module.scss'
 class Day extends Component {
   constructor(props) {
     super(props)
@@ -9,7 +10,7 @@ class Day extends Component {
   render(){
     const {day}=this.props;
     return(
-      <p>{format(day, 'd')}</p>
+      <p className={styles.dayContainer}>{format(day, 'd')}</p>
     )
   }
 }

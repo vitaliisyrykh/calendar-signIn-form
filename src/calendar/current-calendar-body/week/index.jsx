@@ -1,5 +1,6 @@
 import {Component} from 'react';
-import{parse} from 'date-fns';
+import{parse, addDays} from 'date-fns';
+import style from '../week/week.module.scss';
 import Day from '../day'
 
 class Week extends Component {
@@ -11,15 +12,15 @@ class Week extends Component {
 
 
   render() {
-    const {year, week}=this.props;
-    const startOfWeek = parse(`${year} ${week}`, 'Y w', new Date());
-    const dayArray=[];
-    dayArray.map((day)=>{
-      dayArray.push(<Day key={`${day}${year}-${week}`} day={startOfWeek,day}/>)
-    })
-    console.log(dayArray);
+    const {year, week,}=this.props;
+    const startOfWeekq = parse(`${year} ${week}`, 'Y w', new Date());
+    const dayArray= [];
+    [1,2,3,4,5,6,7].map((day)=>{
+      dayArray.push(<Day key={`${day}-${year}-${week}`} day={addDays(startOfWeekq,day)} currentDay={this.props.day}/>)
+    });
+    
     return(
-      <div>{[dayArray]}</div>
+      <div className={style.weekContainer}>{[dayArray]}</div>
     )
   }
 }

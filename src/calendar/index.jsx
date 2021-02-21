@@ -26,7 +26,7 @@ class Calendar extends React.Component {
     const year = getYear(day);
     const month = getMonth(day)
     return (
-      <section className ={style.calendarContainer}>
+      <main className ={style.calendarContainer}>
         <CurrentDay day={day}/>
         <CurrentCalendarBody 
           day = {day} 
@@ -34,7 +34,7 @@ class Calendar extends React.Component {
           handleNext={this.handleNextMounth}
           year={year}
           month={month}/>
-      </section>
+      </main>
     );
   }
 }

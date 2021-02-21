@@ -10,8 +10,10 @@
 }
 .weekDaysContainer{
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
 }
 .weekDay{
-  padding:5px;
+  padding: 10px;
+  font-size: 30px;
+  color: red;
 }

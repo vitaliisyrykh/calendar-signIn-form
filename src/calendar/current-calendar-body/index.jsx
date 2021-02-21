@@ -30,7 +30,7 @@ class CurrentCalendarBody extends Component {
       <div className={style.bodyContainer}>
         <MounthYear day={day} handlePrev={handlePrev} handleNext={handleNext} />
         {this.weekDays()}
-        {/* <Month day={day} year={year} month={month} /> */}
+        <Month day={day} year={year} month={month} /> 
       </div>
     );
   }

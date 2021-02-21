@@ -1,11 +1,19 @@
 .container{
   display: flex;
   justify-content: space-around;
+  padding-top: 30px;
 
   
+}
+
+.month{
+  font-size:30px;
+  color:#419991;
 }
 .btn{
   border: none;
   cursor: pointer;
   margin:10px;
+  background-color: white;
+  text-decoration: underline;
 }

@@ -15,7 +15,7 @@ class MounthYear extends Component {
     return(
         <div className = {style.container}>
           <button className={style.btn} onClick = {this.props.handlePrev}>Prev</button>
-          <h1>{format(day, 'MMMM yyyy')}</h1>
+          <h1 className={style.month}>{format(day, 'MMMM yyyy')}</h1>
           <button className={style.btn} onClick ={this.props.handleNext}>Next</button>
         </div>  
     )

@@ -10,17 +10,17 @@ class Month extends Component {
     const { year, month,day } = this.props;
     
     const startOfMonth = parse(`${year} ${month}`, 'y M', new Date());
-    const weekAmount = getWeeksInMonth(startOfMonth, 1)
+    const weekAmount = getWeeksInMonth(startOfMonth)
     const weeksArray =[];
     
     for (var w = 0; w<weekAmount; w++) {
-      weeksArray.push(<Week year ={year} month={month} day={day} week={getWeek(addWeeks(startOfMonth, w))}/>);
+      weeksArray.push(<Week key = {`${w}-${year}-${month}`} year ={year} month={month} day={day} week={getWeek(addWeeks(startOfMonth, w))}/>);
     }
     
     return( 
-        <div>
+        <section>
           {[weeksArray]}
-        </div>
+        </section>
     )  
 }}
   export default Month;

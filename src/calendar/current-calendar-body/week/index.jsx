@@ -5,12 +5,12 @@ import Day from '../day'
 
 class Week extends Component {
   render() {
-    const {year, week,}=this.props;
+    const {year, week, day}=this.props;
     const startOfWeekq = parse(`${year} ${week}`, 'Y w', new Date());
     const dayArray= [];
-    [1,2,3,4,5,6,7].map((day)=>{
+    [1,2,3,4,5,6,7].map((d)=>{
 
-      dayArray.push(<Day key={`${day}-${year}-${week}`} day={addDays(startOfWeekq,day)} currentDay={this.props.day}/>)
+      dayArray.push(<Day key={`${d}-${year}-${week}`} day={addDays(startOfWeekq,d)} currentDay={day}/>)
     });
     
     return(

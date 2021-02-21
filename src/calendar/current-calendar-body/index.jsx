@@ -11,27 +11,27 @@ class CurrentCalendarBody extends Component {
   weekDays = (props) => {
     return (
       <section className={style.weekDaysContainer}>
+        <div className={style.weekDay}>Sun</div>
         <div className={style.weekDay}>Mon</div>
         <div className={style.weekDay}>Tue</div>
         <div className={style.weekDay}>Wed</div>
         <div className={style.weekDay}>Thu</div>
         <div className={style.weekDay}>Fri</div>
         <div className={style.weekDay}>Sut</div>
-        <div className={style.weekDay}>Sun</div>
       </section>
     );
   };
   render() {
     const { day, handlePrev, handleNext } = this.props;
     const year = day.getFullYear();
-    const month = day.getMonth();
+    const month = day.getMonth()+1;
 
     return (
-      <div className={style.bodyContainer}>
+      <section className={style.bodyContainer}>
         <MounthYear day={day} handlePrev={handlePrev} handleNext={handleNext} />
         {this.weekDays()}
         <Month day={day} year={year} month={month} /> 
-      </div>
+      </section>
     );
   }
 }

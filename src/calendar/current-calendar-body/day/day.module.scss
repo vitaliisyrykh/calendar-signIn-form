@@ -1,3 +1,18 @@
-.dayContainer{
-  padding: 5px 10px;
+
+
+.day {
+  font-size: 2rem;
+  color: transparent;
+  padding: 10px;
+  border: 5px solid transparent;
+}
+
+.currentMonthDay {
+  color: grey;
+}
+
+.currentDay {
+  color: red;
+  border: 5px solid red;
+  border-radius: 50%;
 }

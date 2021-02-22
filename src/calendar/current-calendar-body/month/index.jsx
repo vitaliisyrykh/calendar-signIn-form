@@ -1,6 +1,8 @@
 import{Component} from 'react';
 import {getWeek,parse,getWeeksInMonth,addWeeks} from 'date-fns';
 import Week from '../week';
+import PropTypes from 'prop-types';
+
 
 
 class Month extends Component {
@@ -23,4 +25,9 @@ class Month extends Component {
         </section>
     )  
 }}
+Month.propTypes = {
+  day: PropTypes.instanceOf(Date).isRequired,
+  year:PropTypes.number.isRequired,
+  month:PropTypes.number.isRequired
+};
   export default Month;

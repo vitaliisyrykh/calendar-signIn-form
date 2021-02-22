@@ -1,8 +1,8 @@
 import {Component} from 'react';
 import{parse, addDays} from 'date-fns';
 import style from '../week/week.module.scss';
-import Day from '../day'
-
+import Day from '../day';
+import PropTypes from 'prop-types';
 class Week extends Component {
   render() {
     const {year, week, day}=this.props;
@@ -18,4 +18,9 @@ class Week extends Component {
     )
   }
 }
+Week.propTypes = {
+  day: PropTypes.instanceOf(Date).isRequired,
+  year:PropTypes.number.isRequired,
+  week:PropTypes.number.isRequired
+};
 export default Week;

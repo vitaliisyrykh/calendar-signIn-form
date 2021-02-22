@@ -1,6 +1,8 @@
 import {Component} from 'react';
 import {format} from 'date-fns';
 import style from '../current-day/current-day.module.scss';
+import PropTypes from 'prop-types';
+
 
 class CurrentDay extends Component {
   constructor(props) {
@@ -17,5 +19,7 @@ class CurrentDay extends Component {
     )
   }
 }
-
+CurrentDay .propTypes = {
+  day: PropTypes.instanceOf(Date).isRequired,
+}
 export default CurrentDay;

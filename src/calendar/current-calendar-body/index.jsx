@@ -3,6 +3,8 @@ import { Component } from "react";
 import style from "./current-calendar-body.module.scss";
 import MounthYear from "./mounth-year";
 import Month from "./mounth";
+import PropTypes from 'prop-types';
+
 class CurrentCalendarBody extends Component {
   constructor(props) {
     super(props);
@@ -35,4 +37,10 @@ class CurrentCalendarBody extends Component {
     );
   }
 }
+CurrentCalendarBody .propTypes = {
+  day: PropTypes.instanceOf(Date).isRequired,
+  handleNext: PropTypes.func.isRequired,
+  handlePrev: PropTypes.func.isRequired,
+  
+};
 export default CurrentCalendarBody;

@@ -1,8 +1,8 @@
 import { Component } from "react";
 
 import style from "./current-calendar-body.module.scss";
-import MounthYear from "./mounth-year";
-import Month from "./mounth";
+import MounthYear from "./month-year";
+import Month from "./month";
 import PropTypes from 'prop-types';
 
 class CurrentCalendarBody extends Component {

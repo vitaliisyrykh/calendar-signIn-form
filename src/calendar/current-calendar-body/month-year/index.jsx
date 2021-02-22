@@ -1,10 +1,10 @@
 import{Component} from 'react';
 import{format} from 'date-fns';
-import style from '../mounth-year/mouthYear.module.scss';
+import style from '../month-year/mouthYear.module.scss';
 import PropTypes from 'prop-types';
 
 
-class MounthYear extends Component {
+class MonthYear extends Component {
   constructor(props) {
     super(props)
 
@@ -29,4 +29,4 @@ MonthYear.propTypes = {
   handlePrev: PropTypes.func.isRequired,
   
 };
-export default MounthYear;
+export default MonthYear;

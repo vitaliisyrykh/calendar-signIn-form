@@ -1,18 +1,16 @@
-.bodyContainer{
+.bodyContainer {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 
   width: 50%;
-
-  
 }
-.weekDaysContainer{
+.weekDaysContainer {
   display: flex;
   justify-content: space-between;
 }
-.weekDay{
+.weekDay {
   padding: 10px;
   font-size: 30px;
   color: red;

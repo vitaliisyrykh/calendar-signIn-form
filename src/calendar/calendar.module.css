@@ -1,6 +1,6 @@
-.calendarContainer{
+.calendarContainer {
   border: 10px solid #009b92;
   display: flex;
- 
-box-sizing: border-box;  
+
+  box-sizing: border-box;
 }
